@@ -7,4 +7,4 @@
 - Installing [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting).
 - Installing [zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions).
 - Installing [nvm](https://github.com/nvm-sh/nvm) for [coc.nvim](https://github.com/neoclide/coc.nvim) plugin.
-- Intalling [vim plugin manager](https://github.com/junegunn/vim-plug) for [neovim](https://github.com/neovim/neovim).
+- Installing [vim plugin manager](https://github.com/junegunn/vim-plug) for [neovim](https://github.com/neovim/neovim).
