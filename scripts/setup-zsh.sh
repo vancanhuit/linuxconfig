@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
 echo '----- Installing ohmyzsh configuration framework -----'
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
