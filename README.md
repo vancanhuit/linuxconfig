@@ -11,3 +11,12 @@
 ## Setting up [Neovim](https://github.com/neovim/neovim)
 - Installing [nvm](https://github.com/nvm-sh/nvm) for [coc.nvim](https://github.com/neoclide/coc.nvim) plugin.
 - Installing [vim-plug](https://github.com/junegunn/vim-plug) for managing plugins.
+
+## TMUX
+
+[Read the Tao of Tmux][https://leanpub.com/the-tao-of-tmux/read].
+
+## Xresources and rxvt-unicode
+
+- [Xresources](https://wiki.archlinux.org/index.php/X_resources).
+- [rxvt-unicode](https://wiki.archlinux.org/index.php/Rxvt-unicode).
