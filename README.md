@@ -14,7 +14,7 @@
 
 ## TMUX
 
-[Read the Tao of Tmux][https://leanpub.com/the-tao-of-tmux/read].
+[Read the Tao of Tmux](https://leanpub.com/the-tao-of-tmux/read).
 
 ## Xresources and rxvt-unicode
 
