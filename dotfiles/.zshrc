@@ -102,9 +102,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias rm='rm -iv'
+alias cp='cp -v'
+alias mv='mv -v'
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
