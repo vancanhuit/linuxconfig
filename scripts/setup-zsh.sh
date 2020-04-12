@@ -20,4 +20,4 @@ export NVM_DIR="$HOME/.nvm" && (
       ) && \. "$NVM_DIR/nvm.sh"
 
 echo '----- Copying .zshrc -----'
-cp ../dotfiles/.zshrc ~/
+cp ../dotfiles/.zshrc $HOME
