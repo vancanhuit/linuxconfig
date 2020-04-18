@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo '----- Copying .tmux.conf ------'
-cp ../dotfiles/.tmux.conf $HOME
+cp ../conf/.tmux.conf $HOME

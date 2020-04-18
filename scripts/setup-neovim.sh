@@ -8,4 +8,4 @@ echo '----- Copying init.vim ------'
 if [ ! -d "$HOME/.config/nvim" ]; then
     mkdir -p $HOME/.config/nvim
 fi
-cp ../dotfiles/init.vim $HOME/.config/nvim/
+cp ../conf/init.vim $HOME/.config/nvim/
