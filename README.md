@@ -4,7 +4,7 @@
 
 - Installing [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH).
 - Installing [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh) configuration framework.
-- Installing [powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k) theme.
+- Installing [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme.
 - Installing [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting).
 - Installing [zsh autosuggestions](https://github.com/zsh-users/zsh-autosuggestions).
 
