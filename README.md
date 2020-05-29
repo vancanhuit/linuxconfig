@@ -17,7 +17,3 @@
 - [Tmux](https://github.com/tmux/tmux).
 - [Read the Tao of Tmux](https://leanpub.com/the-tao-of-tmux/read).
 
-## Xresources and rxvt-unicode
-
-- [Xresources](https://wiki.archlinux.org/index.php/X_resources).
-- [rxvt-unicode](https://wiki.archlinux.org/index.php/Rxvt-unicode).
