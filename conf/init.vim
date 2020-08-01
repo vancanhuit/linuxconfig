@@ -6,6 +6,8 @@ set expandtab
 set cursorline
 set clipboard+=unnamedplus
 
+let g:python3_host_prog = "/usr/bin/python3"
+
 " Vim-Plug manager
 call plug#begin('~/.local/share/nvim/plugged')
 
@@ -23,4 +25,4 @@ colorscheme dracula
 
 hi! Normal ctermbg=NONE guibg=NONE
 
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts = 1
