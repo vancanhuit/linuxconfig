@@ -18,7 +18,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
-"source ~/.config/nvim/coc.vim
+source ~/.config/nvim/coc.vim
 
 " Plugin settings
 colorscheme dracula
@@ -26,3 +26,4 @@ colorscheme dracula
 hi! Normal ctermbg=NONE guibg=NONE
 
 let g:airline_powerline_fonts = 1
+
