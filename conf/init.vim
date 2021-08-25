@@ -12,13 +12,8 @@ let g:python3_host_prog = "/usr/bin/python3"
 call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'dracula/vim', {'as': 'dracula' }
-Plug 'vim-airline/vim-airline'
-Plug 'airblade/vim-gitgutter'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
-
-source ~/.config/nvim/coc.vim
 
 " Plugin settings
 colorscheme dracula

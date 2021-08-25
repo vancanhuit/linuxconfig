@@ -10,4 +10,3 @@ if [ ! -d "$HOME/.config/nvim" ]; then
 fi
 
 cp ../conf/init.vim $HOME/.config/nvim/
-cp ../conf/coc.vim $HOME/.config/nvim/
