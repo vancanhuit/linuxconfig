@@ -13,6 +13,13 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 Plug 'dracula/vim', {'as': 'dracula' }
 Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'hoob3rt/lualine.nvim'
@@ -25,8 +32,63 @@ colorscheme dracula
 
 hi! Normal ctermbg=NONE guibg=NONE
 
+set completeopt=menu,menuone,noselect
+
+lua <<EOF
+  -- Setup nvim-cmp.
+  local cmp = require'cmp'
+
+  cmp.setup({
+    snippet = {
+      expand = function(args)
+        -- For `vsnip` user.
+        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
+
+        -- For `luasnip` user.
+        -- require('luasnip').lsp_expand(args.body)
+
+        -- For `ultisnips` user.
+        -- vim.fn["UltiSnips#Anon"](args.body)
+      end,
+    },
+    mapping = {
+      ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      ['<C-Space>'] = cmp.mapping.complete(),
+      ['<C-e>'] = cmp.mapping.close(),
+      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
+    sources = {
+      { name = 'nvim_lsp' },
+
+      -- For vsnip user.
+      { name = 'vsnip' },
+
+      -- For luasnip user.
+      -- { name = 'luasnip' },
+
+      -- For ultisnips user.
+      -- { name = 'ultisnips' },
+
+      { name = 'buffer' },
+      { name = 'path' },
+    }
+  })
+EOF
+
+
 lua << EOF
-require'lspconfig'.pyright.setup{}
+require'lspconfig'.pyright.setup{
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+
+require'lspconfig'.gopls.setup{
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
+
+require'lspconfig'.bashls.setup{
+    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+}
 EOF
 
 lua <<EOF
