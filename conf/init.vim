@@ -146,6 +146,10 @@ nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 lua <<EOF
 require('lualine').setup{
-    options = { theme = 'dracula' }
+    options = { 
+        theme = 'dracula',
+        component_separators = ' ',
+        section_separators = ' ',
+    }
 }
 EOF
