@@ -51,14 +51,14 @@ lua <<EOF
         -- vim.fn["UltiSnips#Anon"](args.body)
       end,
     },
-    mapping = {
-      ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+    mapping = cmp.mapping.preset.insert({
+      ['<C-b>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
       ['<C-Space>'] = cmp.mapping.complete(),
-      ['<C-e>'] = cmp.mapping.close(),
+      ['<C-e>'] = cmp.mapping.abort(),
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    },
-    sources = {
+    }),
+    sources = cmp.config.sources({
       { name = 'nvim_lsp' },
 
       -- For vsnip user.
@@ -72,22 +72,27 @@ lua <<EOF
 
       { name = 'buffer' },
       { name = 'path' },
-    }
+    })
   })
 EOF
 
-
 lua << EOF
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+
 require'lspconfig'.pyright.setup{
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    capabilities = capabilities
 }
 
 require'lspconfig'.gopls.setup{
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    capabilities = capabilities
 }
 
 require'lspconfig'.bashls.setup{
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+    capabilities = capabilities
+}
+
+require('lspconfig').yamlls.setup {
+    capabilities = capabilities
 }
 EOF
 
